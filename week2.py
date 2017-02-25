@@ -31,12 +31,15 @@ class MNIST(object):
     """Load the training dataset."""
     
     images, labels = self.load('mnist/train/images', 'mnist/train/labels')
+    ### WINDOWS USERS: replace the line above with the one below:
+    # images, labels = self.load('mnist\train\images', 'mnist\train\labels')
     self.train_data = zip(images, labels)
   
   def load_valid(self):
     """Load the validation dataset."""
-    images, labels = self.load(os.path.join('mnist', 'valid', 'images'),
-                               os.path.join('mnist', 'valid', 'labels'))
+    images, labels = self.load('mnist/valid/images', 'mnist/valid/labels')
+    ### WINDOWS USERS: replace the line above with the one below:
+    # images, labels = self.load('mnist\valid\images', 'mnist\valid\labels')
     self.valid_data = zip(images, labels)
   
   @classmethod
@@ -166,6 +169,7 @@ class NeuralNet(object):
 ### All the activations will be sigmoids, and both the `sigmoid` and
 ### `sigmoid_prime` methods are provided (they work with vectors as well).
 
+
 ### Task 5:
 ### Implement the `train` method. Put all your work together and use gradient
 ### descent to update the neural net. Run your implementation over all the
@@ -174,6 +178,7 @@ class NeuralNet(object):
 ### load the training data as well!
 
 ### Your code here.
+
 
 ### Task 6:
 ### Implement stochastic gradient descent. Put the `train` method inside a loop
