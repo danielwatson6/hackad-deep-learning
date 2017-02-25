@@ -87,8 +87,10 @@ class MNIST(object):
 ### `threshold` keyword argument and see its effect on the output.
 
 mnist = MNIST()
-### Your code here.
-
+mnist.load_valid()
+for img, label in mnist.valid_data[:10]:
+  print(label)
+  mnist.display(img)
 
 
 ### Task 2:
