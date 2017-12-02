@@ -1,1 +1,5 @@
 mnist/
+__pycache__/
+*.pyc
+.DS_Store
+ICon?
