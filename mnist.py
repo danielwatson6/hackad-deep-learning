@@ -46,14 +46,14 @@ class MNIST(object):
       images.append([0] * rows * cols)
     
     for i in range(size):
-      # Normalize data to have mean 0 and variance 1
+      # Normalize data to be between 0 and 1
       images[i][:] = np.array(
-        image_data[i * rows * cols : (i + 1) * rows * cols]) / 256 - .5
+        image_data[i * rows * cols : (i + 1) * rows * cols]) / 256
 
     return images, labels
 
   @classmethod
-  def display(cls, img, threshold=200/256 - .5):
+  def display(cls, img, threshold=200/256):
     """Render one of the images in the dataset."""
     render = ''
     for i in range(len(img)):
